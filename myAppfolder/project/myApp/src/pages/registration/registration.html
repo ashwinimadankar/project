@@ -1,0 +1,37 @@
+
+<ion-content padding class="registration">
+  <ion-card>
+    <ion-card-content>
+        <ion-card-header>
+          Sign Form
+          </ion-card-header>
+  <ion-list no-line>
+        <ion-item>
+          <ion-input type="text"  placeholder="Enter your name" [(ngModel)]="userData.name" >
+          </ion-input>
+        </ion-item>
+        <ion-item>
+        
+          <ion-input type="email" placeholder="Enter your email Id" [(ngModel)]="userData.email">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+         
+            <ion-input type="text" placeholder="Enter your phone number"[(ngModel)]="userData.phone">
+            </ion-input>
+          </ion-item> 
+          <ion-item>
+          <ion-input type="password" placeholder="Enter password" [(ngModel)]="userData.password">
+          </ion-input>
+        </ion-item> 
+        <ion-item>
+            
+          <ion-input type="password" placeholder="Confirm password" [(ngModel)]="userData.cpassword">
+          </ion-input>
+        </ion-item>
+       
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+        <button ion-button block  color="facebook" (click)="registration(userData)">Register</button>
+</ion-content>

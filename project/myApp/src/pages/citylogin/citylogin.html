@@ -1,0 +1,22 @@
+
+<ion-content padding class="background">
+ 
+      <ion-card>
+          <ion-card-content>
+             
+        <ion-list no-line>
+            <ion-item>
+                <ion-select placeholder="Select state"[(ngModel)]="state" (ngModelChange)="citylogin(state.state_id)">
+                  <ion-option *ngFor="let res of stateData" [value]="res">{{res.state_name}}</ion-option></ion-select></ion-item>
+            <ion-item>
+                <ion-select placeholder="Select city"[(ngModel)]="city" (ngModelChange)="localitylogin(city.city_id,city.state_id)">
+                  <ion-option *ngFor="let res of cityData" [value]="res">{{res.city_name}}</ion-option></ion-select></ion-item>
+                <ion-item>
+                <ion-select placeholder="Select locality" [(ngModel)]="locality" name="sel2">
+                  <ion-option *ngFor="let res of localityData" [value]="res">{{res.loaction_name}}</ion-option></ion-select></ion-item> 
+          
+                </ion-list>
+            <button ion-button block outline color="light" (click)="mainpage(locality)">Next</button>
+          </ion-card-content>
+        </ion-card>
+</ion-content>

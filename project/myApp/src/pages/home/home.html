@@ -1,0 +1,31 @@
+<ion-content class="background">
+  <!--<form (ngSubmit)="citylogin()" >-->
+  <ion-card>
+    <ion-card-header>
+      Login Form
+
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-line>
+        <ion-item>
+          <ion-input type="email" name="email" [(ngModel)]="user.email" placeholder="Enter user name" >
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" name="password" [(ngModel)]="user.password" placeholder="Enter password">
+          </ion-input>
+        </ion-item> 
+      </ion-list>
+      <a>forgot password?<b>Get  help signing in</b></a>
+        <button ion-button block outline color="light" (click)="citylogin(user)">log in</button>
+       
+        
+    </ion-card-content>
+   
+ 
+  </ion-card>
+ 
+  <button class="bottom" (click)="register()"  ion-button clear full color ="light">Do not have account? Sign up</button>
+ <!--</form> -->
+</ion-content>

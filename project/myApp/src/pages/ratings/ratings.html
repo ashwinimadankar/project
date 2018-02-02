@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="whitesmoke">
+        <ion-title>ratings</ion-title>
+ <!-- <ion-buttons start>
+  <button ion-button icon-only menuToggle>
+  <ion-icon name="menu"></ion-icon>
+  </button>
+  </ion-buttons> -->
+  </ion-navbar>  
+  </ion-header>
+<ion-content class="background">
+        
+    <ion-list *ngFor="let res of hospitals.results">
+      <!-- <ion-item>HOSPITALS</ion-item> -->
+       
+        
+       <ion-item>
+    
+            {{res.hospital_name}} <br>
+            {{res.hospital_address}}<br>
+            {{res.hospital_phone}}
+            </ion-item>
+      </ion-list>
+      <!-- <ion-item>PARKS</ion-item> -->
+   <ion-list *ngFor="let res of parks.results">
+     <ion-item>
+     {{res.park_name}}<br>
+     {{res.park_address}}
+     </ion-item>
+    </ion-list> 
+
+<ion-card><p>Schools</p>
+    <ion-list *ngFor="let res of schools.results">
+            <ion-item>
+            {{res.school_name}}<br>
+            {{res.school_address}}<br>
+            {{res.school_phone}}
+            </ion-item> 
+           </ion-list> 
+        </ion-card>
+
+           <ion-list *ngFor="let res of police.results">
+                <ion-item>
+                {{res.ps_name}}<br>
+                {{res.ps_address}}<br>
+                {{res.ps_phone}}
+                </ion-item> 
+               </ion-list> 
+
+
+</ion-content>
+
+ 
+   

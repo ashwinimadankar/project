@@ -1,0 +1,45 @@
+
+<ion-content padding class="registration">
+  <ion-card>
+   
+    <ion-card-content>.
+        <ion-card-header>
+          Sign Form
+          </ion-card-header>
+  <ion-list no-line>
+    <!-- <form [formGroup]="registerData" novalidate> -->
+        <ion-item>
+          <!-- <ion-label stacked > name :<span style="color:red">*</span> </ion-label> -->
+          <ion-input type="text"  placeholder="Enter your name" [(ngModel)]="userData.name" (ngModelChange)="validationCheck($event)"   >
+          </ion-input> 
+        </ion-item>
+          <!-- <ion-item *ngIf="registerData.controls.name.invalid && registerData.touched">
+            <p style="color:red">Enter user name</p>
+        </ion-item>
+        <ion-item *ngIf="registerData.controls.name.valid">
+          <p style="color:green">Valid</p></ion-item> -->
+        <ion-item>
+          <ion-input type="email" placeholder="Enter your email Id" [(ngModel)]="userData.email" (ngModelChange)="validationCheck($event)">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+         
+            <ion-input type="text" placeholder="Enter your phone number"[(ngModel)]="userData.phone" (ngModelChange)="validationCheck($event)">
+            </ion-input>
+          </ion-item> 
+          <ion-item>
+          <ion-input type="password" placeholder="Enter password" [(ngModel)]="userData.password" (ngModelChange)="validationCheck($event)">
+          </ion-input>
+        </ion-item> 
+        <ion-item>
+            
+          <ion-input type="password" placeholder="Confirm password" [(ngModel)]="userData.cpassword">
+          </ion-input>
+        </ion-item>
+    <!-- </form> -->
+      </ion-list>
+    </ion-card-content>
+    
+  </ion-card>
+        <button ion-button block  color="facebook" (click)="registration(userData)" [disabled]="btnIsEnable">Register</button>
+</ion-content>

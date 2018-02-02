@@ -1,0 +1,31 @@
+
+<ion-content padding class="background">
+ 
+      <ion-card>
+          <ion-card-content>
+             
+        <ion-list no-line>
+         <!--
+            <ion-label class="item item-input item-select">
+                <div class="input-lable">Select State</div>
+                <ion-select>
+                <ion-option>North Bangalore</ion-option>
+               
+                  </ion-select>  
+                </ion-label>
+                <ion-label class="item item-input item-select">
+                  <div class="input-lable">Select City</div>
+                  <ion-select>
+                  <ion-option>Red </ion-option>
+                
+                    </ion-select>  
+                  </ion-label>
+                -->
+                <ion-item>
+                <ion-select [(ngModel)]="locality">
+                  <ion-option *ngFor="let res of responseData" [value]="res">{{res.loaction_name}}</ion-option></ion-select></ion-item>
+            </ion-list>
+            <button ion-button block outline color="light" (click)=" mainpage()">Next</button>
+          </ion-card-content>
+        </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+page-profile {
+    .background{
+        background-image: url('../assets/imgs/myArea.jpg');
+    }
+   .imgsize{
+       width: 50px;
+       height: 100px;
+       margin-left: 110px;
+   }
+   .scroll-content{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+   ion-card.card{
+    box-shadow: none;
+    background: rgba(0,0,0, 0.5);
+    border-radius: 5px;
+    
+    }
+}
